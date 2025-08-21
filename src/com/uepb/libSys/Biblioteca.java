@@ -25,15 +25,11 @@ public class Biblioteca {
     public static void main(String[] args) {
 
         Biblioteca minhaBiblioteca = new Biblioteca();
+        Livro memoriasPostumas = new Livro("Memórias Postumas de Bras Cubas", "Machado de Assis", 1881);
 
         minhaBiblioteca.adicionarLivro("Cujo", "Stephen King", 1981);
         minhaBiblioteca.adicionarLivro("Gravity Falls", "Caio Victor", 2016);
-
-        ArrayList<Livro> listaLivro = new ArrayList<>();
-
-        Livro memoriasPostumas = new Livro("Memórias Postumas de Bras Cubas", "Machado de Assis", 1881);
         minhaBiblioteca.adicionarLivro(memoriasPostumas);
-        listaLivro.add(memoriasPostumas);
         for (Livro livro : minhaBiblioteca.listaLivros) {
             System.out.println(livro.toString());
         }
