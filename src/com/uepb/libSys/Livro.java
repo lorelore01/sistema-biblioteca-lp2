@@ -36,6 +36,11 @@ public class Livro {
     }
 
     public void setAnoPublicacao(int anoPublicacao) {
+        int anoAtual = 2025;
+        if (anoPublicacao > anoAtual || anoPublicacao < 0) {
+            System.out.println("Erro: ano inválido.");
+            return;
+        }
         this.anoPublicacao = anoPublicacao;
     }
 
@@ -44,7 +49,7 @@ public class Livro {
         return "Livro {" +
                 "\n-> titulo='" + titulo + '\'' +
                 "\n->, autor='" + autor + '\'' +
-                "\n->, anoPublicacao=" + anoPublicacao +
-                '}' + "\n";
+                "\n->, anoPublicacao=" + anoPublicacao + "\n" +
+                '}';
     }
 }
